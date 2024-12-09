@@ -25,7 +25,7 @@ window.onload = () => {
     positionLog = document.getElementById('positionLog');
     rotationLog = document.getElementById('rotationLog');
     zoomLog = document.getElementById('zoomLog');
-    modelEntity = document.getElementById("bananaModel"); 
+    modelEntity = document.getElementById("brushModel"); 
     moveButton = document.getElementById('move-button');
     rotateButton = document.getElementById('rotate-button');
 
