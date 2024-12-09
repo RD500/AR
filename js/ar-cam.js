@@ -14,7 +14,7 @@ let positionLog = undefined;
 let rotationLog = undefined;
 let zoomLog = undefined;
 
-let modelEntity = undefined;  // Updated to modelEntity
+let modelEntity = undefined;  
 
 const rotationSensitivity = 1.5;
 const positionSensitivity = 0.03;
@@ -25,7 +25,7 @@ window.onload = () => {
     positionLog = document.getElementById('positionLog');
     rotationLog = document.getElementById('rotationLog');
     zoomLog = document.getElementById('zoomLog');
-    modelEntity = document.getElementById("bananaModel"); // Default to banana model initially
+    modelEntity = document.getElementById("bananaModel"); 
     moveButton = document.getElementById('move-button');
     rotateButton = document.getElementById('rotate-button');
 
@@ -127,22 +127,22 @@ window.onload = () => {
 
     // Marker detection and model switching
     const bananaMarker = document.querySelector('[id="bananaModel"]');
-    const appleMarker = document.querySelector('[id="appleModel"]');
+    const brushMarker = document.querySelector('[id="brushModel"]');
 
     bananaMarker.addEventListener('markerFound', () => {
-        modelEntity.setAttribute('gltf-model', './assets/3d-models/banana.glb'); // Path to the banana model
-        modelEntity.object3D.position.set(0, 0, 0); // Reset position if needed
-        modelEntity.object3D.rotation.set(0, 0, 0); // Reset rotation if needed
-        modelEntity.object3D.scale.set(1, 1, 1);   // Reset scale if needed
+        modelEntity.setAttribute('gltf-model', './assets/3d-models/banana.glb'); 
+        modelEntity.object3D.position.set(0, 0, 0); 
+        modelEntity.object3D.rotation.set(0, 0, 0); 
+        modelEntity.object3D.scale.set(1, 1, 1);   
         console.log('Banana marker detected');
     });
 
-    appleMarker.addEventListener('markerFound', () => {
-        modelEntity.setAttribute('gltf-model', './assets/3d-models/apple.glb'); // Path to the apple model
-        modelEntity.object3D.position.set(0, 0, 0); // Reset position if needed
-        modelEntity.object3D.rotation.set(0, 0, 0); // Reset rotation if needed
-        modelEntity.object3D.scale.set(1, 1, 1);   // Reset scale if needed
-        console.log('Apple marker detected');
+    brushMarker.addEventListener('markerFound', () => {
+        modelEntity.setAttribute('gltf-model', './assets/3d-models/toothbrush.glb'); 
+        modelEntity.object3D.position.set(0, 0, 0); 
+        modelEntity.object3D.rotation.set(0, 0, 0); 
+        modelEntity.object3D.scale.set(1, 1, 1);   
+        console.log('Brush marker detected');
     });
 };
 
