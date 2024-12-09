@@ -69,9 +69,9 @@
         <button id="snap-button" onclick="getSnap()"></button>
         <button id="rotate-button" class="toggler" onclick="toggleRotate()"></button>
     </section>
-    <a-scene id="scene" embedded arjs vr-mode-ui="enabled: false"
+    <a-scene id="scene" embedded arjs="sourceType: webcam; debugUIEnabled: false; cameraParametersUrl: ./assets/camera_para.dat"
         renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;">
-        <a-marker type="pattern" url="./assets/custom-marker/pattern-nssnt.patt" smooth="true">
+         <a-marker type="pattern" url="./assets/custom-marker/pattern-nssnt.patt" smooth="true" minConfidence="0.6">
             <a-entity position="0 0 0" rotation="270 0 0">
                 <a-entity id='theModel' position="0 -0.5 0" rotation="0 0 0" scale="12.5 12.5 12.5"
                     gltf-model="./assets/3d-models/banana.glb">
