@@ -130,7 +130,7 @@ window.onload = () => {
     const brushMarker = document.querySelector('[id="brushModel"]');
 
     bananaMarker.addEventListener('markerFound', () => {
-        modelEntity.setAttribute('gltf-model', './assets/3d-models/banana.glb'); 
+        modelEntity.setAttribute('gltf-model', './assets/3d-models/toothbrush.glb'); 
         modelEntity.object3D.position.set(0, 0, 0); 
         modelEntity.object3D.rotation.set(0, 0, 0); 
         modelEntity.object3D.scale.set(1, 1, 1);   
@@ -138,7 +138,7 @@ window.onload = () => {
     });
 
     brushMarker.addEventListener('markerFound', () => {
-        modelEntity.setAttribute('gltf-model', './assets/3d-models/toothbrush.glb'); 
+        modelEntity.setAttribute('gltf-model', './assets/3d-models/banana.glb'); 
         modelEntity.object3D.position.set(0, 0, 0); 
         modelEntity.object3D.rotation.set(0, 0, 0); 
         modelEntity.object3D.scale.set(1, 1, 1);   
